@@ -11,9 +11,11 @@ def clean_phone_number(phone_number)
   if phone_number.nil? || phone_number.length < 10 || phone_number.length > 11 ||
   (phone_number.length == 11 && phone_number[0] != '1')
     phone_number = ''
+    return
   end
 
-  phone_number[-10..-1]
+  phone_number = phone_number[-10..-1]
+  phone_number.to_s.insert(6, '-').insert(3, ')').insert(0, '(')
 end
 
 contents = CSV.open(
