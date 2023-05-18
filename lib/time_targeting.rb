@@ -25,7 +25,7 @@ def add_hour(registered_time, hour_hash)
 end
 
 contents = CSV.open(
-  'event_attendees.csv',
+  'event_attendees_full.csv',
   headers: true,
   header_converters: :symbol
 )

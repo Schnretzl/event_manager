@@ -17,7 +17,7 @@ def clean_phone_number(phone_number)
 end
 
 contents = CSV.open(
-  'event_attendees.csv',
+  'event_attendees_full.csv',
   headers: true,
   header_converters: :symbol
 )

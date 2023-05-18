@@ -31,7 +31,7 @@ def add_day(registered_day, day_hash)
 end
 
 contents = CSV.open(
-  'event_attendees.csv',
+  'event_attendees_full.csv',
   headers: true,
   header_converters: :symbol
 )
